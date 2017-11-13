@@ -1,0 +1,72 @@
+{
+  "name": "flightplan",
+  "description": "Library for streamlining application deployment or systems administration tasks",
+  "version": "0.6.17",
+  "author": "Patrick Stadler <patrick.stadler@gmail.com>",
+  "keywords": [
+    "deploy",
+    "deployment",
+    "commands",
+    "devops",
+    "exec",
+    "shell",
+    "bash",
+    "ssh",
+    "tasks",
+    "parallel",
+    "sequential",
+    "remote",
+    "local",
+    "cloud",
+    "fabric"
+  ],
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/jasoncodingnow/flightplan-run",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasoncodingnow/flightplan-run"
+  },
+  "bugs": {
+    "url": "https://github.com/jasoncodingnow/flightplan-run/issues"
+  },
+  "bin": {
+    "fly": "./bin/fly.js"
+  },
+  "scripts": {
+    "docs": "cd ./docs; node generate.js",
+    "test": "./node_modules/.bin/mocha",
+    "lint": "./node_modules/.bin/eslint .",
+    "coverage": "rm -rf ./coverage; ./node_modules/.bin/istanbul cover --dir coverage/lib ./node_modules/.bin/_mocha -- -R spec; ./node_modules/.bin/istanbul report",
+    "coverage-lcov": "rm -rf ./coverage; ./node_modules/.bin/istanbul cover --dir coverage/lib --report lcovonly ./node_modules/.bin/_mocha -- -R spec; ./node_modules/.bin/istanbul report lcovonly",
+    "coveralls": "npm run coverage-lcov && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "byline": "^4.2.1",
+    "chalk": "^1.1.1",
+    "fibers": "1.0.15",
+    "interpret": "^1.0.0",
+    "liftoff": "^2.2.0",
+    "nopt": "^3.0.4",
+    "pretty-hrtime": "^1.0.1",
+    "prompt": "^0.2.14",
+    "semver": "^5.1.0",
+    "ssh2": "^0.4.15",
+    "util-extend": "^1.0.1",
+    "v8flags": "^2.0.10"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.0",
+    "markdox": "^0.1.10",
+    "mocha": "^2.3.3",
+    "pre-commit": "^1.1.1",
+    "proxyquire": "^1.7.3",
+    "sinon": "^1.17.2"
+  }
+}
