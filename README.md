@@ -15,10 +15,10 @@ A complete list of changes can be found in the [Changelog](https://github.com/ps
 
 ```bash
 # install the cli tool
-$ npm install -g flightplan
+$ npm install -g flightplan-run
 
 # use it in your project
-$ npm install flightplan --save-dev
+$ npm install flightplan-run --save-dev
 
 # run a flightplan (`fly --help` for more information)
 $ fly [task:]<target> [--flightplan flightplan.(js|coffee)]
@@ -30,7 +30,7 @@ By default, the `fly` command will try to load `flightplan.js` or `flightplan.co
 
 ```javascript
 // flightplan.js
-var plan = require('flightplan');
+var plan = require('flightplan-run');
 
 // configuration
 plan.target('staging', {
@@ -98,7 +98,7 @@ A flightplan is a set of subsequent flights to be executed on one or more
 hosts. Configuration is handled with the `target()` method.
 
 ```javascript
-var plan = require('flightplan');
+var plan = require('flightplan-run');
 ```
 
 ### Flights
