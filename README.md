@@ -11,12 +11,15 @@ A complete list of changes can be found in the [Changelog](https://github.com/ps
 
 **Looking for help / maintainers:** See [#162](https://github.com/pstadler/flightplan/issues/162).
 
-### WHAT CHANGES:
+
+
+# WHAT CHANGES:
 
 * add callback in flight.run(): 
     *  ``` flight.run(target, server, {}, function() {}); ```
 * add options params to exec. Sometimes, you wanna restart your application but it will last a long time, then flightplan won't end this exec session. I add this params: connEndAfterExit to make sure the exec session will end. For example: 
     * ```remote.exec('app restart', { "connEndAfterExit": true })```
+    
     
 
 ## Installation & Usage
